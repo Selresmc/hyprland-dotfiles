@@ -1,0 +1,6 @@
+[Unit]
+Description=Hyprland Night Light
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hypr/scripts/nightlight.sh

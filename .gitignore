@@ -1,0 +1,25 @@
+# Git-Metadaten
+.git/
+
+# Caches und temporäre Dateien
+**/.cache/
+**/__pycache__/
+*.py[cod]
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Backups und alte Versionen
+*.bak
+*.bak-*
+*.orig
+
+# Lokal generierte Dateien (pywal-Farben, Symlinks nach ~/.cache/wal)
+hypr/configs/colors-hyprland.lua
+kitty/colors-kitty.conf
+rofi/themes/rofi-colors.rasi
+swaync/colors.css
+waybar/theme.css
+waybar/style/theme.css
+wlogout/colors.css

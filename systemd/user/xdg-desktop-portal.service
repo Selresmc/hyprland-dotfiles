@@ -1,0 +1,16 @@
+# Lokale Kopie von /usr/lib/systemd/user/xdg-desktop-portal.service
+# Einziger Unterschied: die Zeile "Requisite=graphical-session.target" wurde entfernt.
+# Grund: Hyprland wird hier direkt (ohne uwsm) gestartet, graphical-session.target
+# ist daher nie aktiv und der Portal-Dienst schlug mit "dependency" fehl.
+# Loeschen, wenn die Session "Hyprland (uwsm-managed)" im Login genutzt wird.
+
+[Unit]
+Description=Portal service
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.portal.Desktop
+ExecStart=/usr/libexec/xdg-desktop-portal
+Slice=session.slice
